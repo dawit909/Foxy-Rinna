@@ -1,0 +1,839 @@
+/* ============================================================
+   GLOBAL ROOT TOKENS
+============================================================ */
+:root {
+    --font-step: 18px;
+    --content-width: 74ch;
+    --line-height: 1.55;
+    --font-weight: 400;
+
+    /* Typography Stacks */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-bookerly: "CustomBookerly", Georgia, serif;
+    --font-georgia: "CustomGeorgia", Georgia, serif;
+    --font-cheltenham: "CustomCheltenham", "Cheltenham", "Times New Roman", serif;
+    --font-charter: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+    --font-garamond: Garamond, "EB Garamond", "Baskerville", serif;
+    --font-palatino: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+    --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+}
+
+/* ============================================================
+   FULLSCREEN ROOT OVERLAY
+============================================================ */
+#reader-root {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #1c1b22 !important;
+    color: #dedcd8 !important;
+    font-size: var(--font-step) !important;
+    line-height: var(--line-height) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    z-index: 2147483640 !important;
+    box-sizing: border-box !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    isolation: isolate !important;
+}
+
+/* Chrome Typography: Strictly System Sans (Excludes font selector options) */
+#reader-toolbar,
+#reader-toolbar *,
+#reader-root .reader-popup,
+#reader-root .reader-popup *:not(#font-family-select):not(#font-family-select *),
+#reader-source {
+    font-family: var(--font-sans) !important;
+}
+
+/* ============================================================
+   THEMES (Canvas, Panel, Text & Accent)
+============================================================ */
+#reader-root.theme-dark {
+    background-color: #1c1b22 !important;
+    color: #dedcd8 !important;
+    --link-color: #00ddff;
+    --border-color: #52525e;
+}
+
+#reader-root.theme-light {
+    background-color: #ffffff !important;
+    color: #15141a !important;
+    --link-color: #0060df;
+    --border-color: #cfcfd8;
+}
+
+#reader-root.theme-sepia {
+    background-color: #fbf0d9 !important;
+    color: #3b3228 !important;
+    --link-color: #0060df;
+    --border-color: #cfbe9f;
+}
+
+#reader-root.theme-contrast {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    --link-color: #ffff00;
+    --border-color: #737373;
+}
+
+#reader-root.theme-gray {
+    background-color: #2a2b30 !important;
+    color: #f0f1f4 !important;
+    --link-color: #70baff;
+    --border-color: #585a66;
+}
+
+@media (prefers-color-scheme: dark) {
+    #reader-root.theme-auto {
+        background-color: #1c1b22 !important;
+        color: #dedcd8 !important;
+        --link-color: #00ddff;
+        --border-color: #52525e;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #reader-root.theme-auto {
+        background-color: #ffffff !important;
+        color: #15141a !important;
+        --link-color: #0060df;
+        --border-color: #cfcfd8;
+    }
+}
+
+/* ============================================================
+   ACTIVE FONT FAMILY OVERRIDES
+============================================================ */
+#reader-root.font-bookerly,
+#reader-root.font-bookerly #reader-container,
+#reader-root.font-bookerly #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+    font-family: var(--font-bookerly) !important;
+}
+
+#reader-root.font-georgia,
+#reader-root.font-georgia #reader-container,
+#reader-root.font-georgia #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+    font-family: var(--font-georgia) !important;
+}
+
+#reader-root.font-cheltenham,
+#reader-root.font-cheltenham #reader-container,
+#reader-root.font-cheltenham #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+    font-family: var(--font-cheltenham) !important;
+}
+
+#reader-root.font-sans,
+#reader-root.font-sans #reader-container,
+#reader-root.font-sans #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+    font-family: var(--font-sans) !important;
+}
+
+#reader-root.font-charter,
+#reader-root.font-charter #reader-container,
+#reader-root.font-charter #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+    font-family: var(--font-charter) !important;
+}
+
+#reader-root.font-garamond,
+#reader-root.font-garamond #reader-container,
+#reader-root.font-garamond #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+    font-family: var(--font-garamond) !important;
+}
+
+#reader-root.font-palatino,
+#reader-root.font-palatino #reader-container,
+#reader-root.font-palatino #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+    font-family: var(--font-palatino) !important;
+}
+
+#reader-root.font-mono,
+#reader-root.font-mono #reader-container,
+#reader-root.font-mono #reader-content * {
+    font-family: var(--font-mono) !important;
+}
+
+/* ============================================================
+   FONT SELECTOR: LIVE FONT STYLES (Menu & Closed Display)
+============================================================ */
+/* Active select box reflects chosen font */
+#reader-root.font-bookerly #font-family-select {
+    font-family: var(--font-bookerly) !important;
+}
+
+#reader-root.font-cheltenham #font-family-select {
+    font-family: var(--font-cheltenham) !important;
+}
+
+#reader-root.font-georgia #font-family-select {
+    font-family: var(--font-georgia) !important;
+}
+
+#reader-root.font-sans #font-family-select {
+    font-family: var(--font-sans) !important;
+}
+
+#reader-root.font-charter #font-family-select {
+    font-family: var(--font-charter) !important;
+}
+
+#reader-root.font-garamond #font-family-select {
+    font-family: var(--font-garamond) !important;
+}
+
+#reader-root.font-palatino #font-family-select {
+    font-family: var(--font-palatino) !important;
+}
+
+#reader-root.font-mono #font-family-select {
+    font-family: var(--font-mono) !important;
+}
+
+/* Each dropdown option renders in its own typeface */
+#reader-root select#font-family-select option {
+    font-size: 15px !important;
+    padding: 6px 10px !important;
+}
+
+#reader-root select#font-family-select option[value="font-bookerly"],
+#reader-root .opt-bookerly {
+    font-family: var(--font-bookerly) !important;
+}
+
+#reader-root select#font-family-select option[value="font-cheltenham"],
+#reader-root .opt-cheltenham {
+    font-family: var(--font-cheltenham) !important;
+}
+
+#reader-root select#font-family-select option[value="font-georgia"],
+#reader-root .opt-georgia {
+    font-family: var(--font-georgia) !important;
+}
+
+#reader-root select#font-family-select option[value="font-sans"],
+#reader-root .opt-sans {
+    font-family: var(--font-sans) !important;
+}
+
+#reader-root select#font-family-select option[value="font-charter"],
+#reader-root .opt-charter {
+    font-family: var(--font-charter) !important;
+}
+
+#reader-root select#font-family-select option[value="font-garamond"],
+#reader-root .opt-garamond {
+    font-family: var(--font-garamond) !important;
+}
+
+#reader-root select#font-family-select option[value="font-palatino"],
+#reader-root .opt-palatino {
+    font-family: var(--font-palatino) !important;
+}
+
+#reader-root select#font-family-select option[value="font-mono"],
+#reader-root .opt-mono {
+    font-family: var(--font-mono) !important;
+}
+
+/* Code Block Protection */
+#reader-content pre,
+#reader-content code,
+#reader-content kbd,
+#reader-content samp {
+    font-family: var(--font-mono) !important;
+    font-size: 0.9em !important;
+}
+
+#reader-content pre {
+    padding: 14px 18px !important;
+    border-radius: 6px !important;
+    background: rgba(127, 127, 127, 0.12) !important;
+    overflow-x: auto !important;
+}
+
+/* ============================================================
+   ARTICLE CONTAINER
+============================================================ */
+#reader-container {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    font-size: var(--font-step) !important;
+    max-width: min(var(--content-width), calc(100vw - 48px)) !important;
+    margin: 0 auto !important;
+    padding: 80px 24px 160px 24px !important;
+    transition: max-width 0.15s ease-out;
+}
+
+#reader-title {
+    font-size: calc(var(--font-step) * 1.75) !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    margin: 0 0 14px 0 !important;
+    color: inherit !important;
+}
+
+#reader-source {
+    display: inline-block !important;
+    color: var(--link-color, #00ddff) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    margin-bottom: 14px !important;
+}
+
+#reader-source:hover {
+    text-decoration: underline !important;
+}
+
+#reader-byline {
+    font-style: italic !important;
+    font-size: 0.95em !important;
+    opacity: 0.8 !important;
+    margin-bottom: 6px !important;
+}
+
+#reader-reading-time {
+    font-size: 0.85em !important;
+    opacity: 0.75 !important;
+    margin-bottom: 20px !important;
+}
+
+.reader-header-separator {
+    border: 0 !important;
+    border-top: 1px solid var(--border-color, #52525e) !important;
+    margin-bottom: 30px !important;
+}
+
+/* Universal text sizing and line leading */
+#reader-content,
+#reader-content * {
+    font-size: var(--font-step) !important;
+    line-height: var(--line-height) !important;
+    color: inherit !important;
+}
+
+#reader-content p,
+#reader-content div,
+#reader-content span,
+#reader-content li {
+    font-weight: var(--font-weight) !important;
+}
+
+#reader-content strong,
+#reader-content b,
+#reader-content th {
+    font-weight: 700 !important;
+}
+
+#reader-content p {
+    margin-top: calc(var(--line-height) * 0.8em) !important;
+    margin-bottom: calc(var(--line-height) * 0.8em) !important;
+}
+
+#reader-content a {
+    color: var(--link-color, #00ddff) !important;
+}
+
+#reader-content img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 2em auto !important;
+    border-radius: 4px !important;
+}
+
+/* Scaled Sub-Headings */
+#reader-content h1 {
+    font-size: calc(var(--font-step) * 1.5) !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+    margin: 1.6em 0 0.6em 0 !important;
+}
+
+#reader-content h2 {
+    font-size: calc(var(--font-step) * 1.3) !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+    margin: 1.5em 0 0.5em 0 !important;
+}
+
+#reader-content h3 {
+    font-size: calc(var(--font-step) * 1.15) !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    margin: 1.3em 0 0.4em 0 !important;
+}
+
+#reader-content h4,
+#reader-content h5,
+#reader-content h6 {
+    font-size: var(--font-step) !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    margin: 1.2em 0 0.4em 0 !important;
+}
+
+#reader-content table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 2em 0 !important;
+    display: block !important;
+    overflow-x: auto !important;
+    font-size: 0.9em !important;
+}
+
+#reader-content th,
+#reader-content td {
+    border: 1px solid var(--border-color, #52525e) !important;
+    padding: 10px 14px !important;
+    text-align: left !important;
+}
+
+/* ============================================================
+   AUTHENTIC TOOLBAR
+============================================================ */
+#reader-toolbar {
+    position: fixed !important;
+    top: 25vh !important;
+    left: 32px !important;
+    background-color: #2b2a33 !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 4px !important;
+    gap: 4px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+    z-index: 2147483647 !important;
+}
+
+#reader-root .reader-tool-btn {
+    width: 36px !important;
+    height: 36px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 6px !important;
+    color: #cfcfd8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: background-color 0.12s ease, color 0.12s ease !important;
+}
+
+#reader-root .reader-tool-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+#reader-root .reader-tool-btn.active {
+    background-color: #384c5a !important;
+    color: #00ddff !important;
+}
+
+#reader-root .reader-tool-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    display: block !important;
+    fill: currentColor !important;
+}
+
+/* ============================================================
+   100% SOLID POPUPS
+============================================================ */
+#reader-root .reader-popup {
+    position: fixed !important;
+    top: 25vh !important;
+    left: 80px !important;
+    width: 320px !important;
+    background-color: #2b2a33 !important;
+    color: #dedcd8 !important;
+    border: 1px solid #52525e !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.85) !important;
+    z-index: 2147483647 !important;
+    opacity: 1 !important;
+}
+
+#reader-root .reader-hidden {
+    display: none !important;
+}
+
+/* Modal Theme Styling */
+#reader-root.theme-dark .reader-popup,
+#reader-root.theme-auto .reader-popup {
+    background-color: #2b2a33 !important;
+    color: #dedcd8 !important;
+    border-color: #52525e !important;
+}
+
+#reader-root.theme-light .reader-popup {
+    background-color: #f0f0f4 !important;
+    color: #15141a !important;
+    border-color: #cfcfd8 !important;
+}
+
+#reader-root.theme-sepia .reader-popup {
+    background-color: #ebd8b7 !important;
+    color: #3b3228 !important;
+    border-color: #cfbe9f !important;
+}
+
+#reader-root.theme-contrast .reader-popup {
+    background-color: #141414 !important;
+    color: #ffffff !important;
+    border-color: #737373 !important;
+}
+
+#reader-root.theme-gray .reader-popup {
+    background-color: #373941 !important;
+    color: #f0f1f4 !important;
+    border-color: #585a66 !important;
+}
+
+#reader-root .reader-popup-title {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+    color: inherit !important;
+}
+
+#reader-root .reader-popup-divider {
+    border: 0 !important;
+    border-top: 1px solid rgba(127, 127, 127, 0.3) !important;
+    margin: 14px 0 !important;
+}
+
+#reader-root .reader-control-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 14px !important;
+    font-size: 14px !important;
+    color: inherit !important;
+}
+
+#reader-root .reader-stepper {
+    display: flex !important;
+    gap: 4px !important;
+}
+
+#reader-root .reader-step-btn {
+    background-color: #42414d !important;
+    border: none !important;
+    color: inherit !important;
+    width: 32px !important;
+    height: 28px !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
+#reader-root .reader-step-btn:hover {
+    opacity: 0.8 !important;
+}
+
+#reader-root .reader-control-grid {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+#reader-root .reader-select-group {
+    flex: 1 !important;
+}
+
+#reader-root .reader-select-group label {
+    display: block !important;
+    font-size: 12px !important;
+    opacity: 0.75 !important;
+    margin-bottom: 6px !important;
+}
+
+#reader-root .reader-select-group select {
+    width: 100% !important;
+    background-color: #42414d !important;
+    color: inherit !important;
+    border: 1px solid rgba(127, 127, 127, 0.3) !important;
+    border-radius: 4px !important;
+    padding: 6px !important;
+    font-size: 13.5px !important;
+    outline: none !important;
+}
+
+/* Sliders & Step Ticks */
+#reader-root .reader-slider-block {
+    margin-bottom: 14px !important;
+}
+
+#reader-root .reader-slider-label {
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    color: inherit !important;
+    margin-bottom: 8px !important;
+    opacity: 0.9 !important;
+}
+
+#reader-root .reader-slider-row {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+}
+
+#reader-root .reader-slider-icon {
+    font-size: 13px !important;
+    opacity: 0.85 !important;
+    font-family: monospace !important;
+    line-height: 18px !important;
+    margin-top: 1px !important;
+    user-select: none !important;
+}
+
+#reader-root .reader-slider-wrap {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#reader-root .reader-slider-wrap input[type="range"] {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    height: 18px !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+#reader-root .reader-slider-wrap input[type="range"]::-moz-range-track {
+    height: 4px !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 2px !important;
+    border: none !important;
+}
+
+#reader-root .reader-slider-wrap input[type="range"]::-moz-range-progress {
+    height: 4px !important;
+    background-color: var(--link-color, #00ddff) !important;
+    border-radius: 2px !important;
+}
+
+#reader-root .reader-slider-wrap input[type="range"]::-moz-range-thumb {
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50% !important;
+    background-color: #52525e !important;
+    border: 2.5px solid #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+}
+
+#reader-root .reader-ticks {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 9px !important;
+    margin-top: 4px !important;
+    box-sizing: border-box !important;
+    pointer-events: none !important;
+}
+
+#reader-root .reader-tick {
+    width: 1px !important;
+    height: 4px !important;
+    background-color: rgba(255, 255, 255, 0.32) !important;
+    display: inline-block !important;
+}
+
+/* Themes Grid */
+#reader-root .reader-theme-tabs {
+    display: flex !important;
+    border-bottom: 1px solid rgba(127, 127, 127, 0.3) !important;
+    margin-bottom: 14px !important;
+}
+
+#reader-root .reader-theme-tab {
+    background: none !important;
+    border: none !important;
+    padding: 6px 14px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: inherit !important;
+    opacity: 0.6 !important;
+    cursor: pointer !important;
+}
+
+#reader-root .reader-theme-tab.active {
+    opacity: 1 !important;
+    border-bottom: 2px solid var(--link-color, #00ddff) !important;
+}
+
+#reader-root .reader-theme-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+}
+
+#reader-root .reader-theme-btn {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 10px 12px !important;
+    background-color: #42414d !important;
+    border: 1px solid rgba(127, 127, 127, 0.3) !important;
+    border-radius: 6px !important;
+    color: inherit !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+}
+
+#reader-root .reader-theme-btn.active {
+    border-color: #ffffff !important;
+    outline: 1px solid #ffffff !important;
+}
+
+#reader-root .reader-circle {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(127, 127, 127, 0.4) !important;
+}
+
+#reader-root .circle-auto {
+    background: linear-gradient(90deg, #ffffff 50%, #1c1b22 50%) !important;
+}
+
+#reader-root .circle-light {
+    background: #ffffff !important;
+}
+
+#reader-root .circle-dark {
+    background: #1c1b22 !important;
+}
+
+#reader-root .circle-sepia {
+    background: #ebd8b7 !important;
+}
+
+#reader-root .circle-contrast {
+    background: #000000 !important;
+}
+
+#reader-root .circle-gray {
+    background: #9a9da8 !important;
+}
+
+/* Light/Sepia Overrides */
+#reader-root.theme-light #reader-toolbar {
+    background-color: #f0f0f4 !important;
+    border-color: rgba(0, 0, 0, 0.14) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+#reader-root.theme-light .reader-tool-btn {
+    color: #2b2a33 !important;
+}
+
+#reader-root.theme-light .reader-tool-btn:hover {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+#reader-root.theme-light .reader-tool-btn.active {
+    background-color: #d2e3f8 !important;
+    color: #0060df !important;
+}
+
+#reader-root.theme-light .reader-step-btn,
+#reader-root.theme-light .reader-select-group select,
+#reader-root.theme-light .reader-theme-btn {
+    background-color: #e0e0e6 !important;
+    border-color: #cfcfd8 !important;
+}
+
+#reader-root.theme-light input[type="range"]::-moz-range-track {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+#reader-root.theme-light input[type="range"]::-moz-range-thumb {
+    background-color: #cfcfd8 !important;
+    border-color: #15141a !important;
+}
+
+#reader-root.theme-light .reader-tick {
+    background-color: rgba(0, 0, 0, 0.28) !important;
+}
+
+#reader-root.theme-sepia #reader-toolbar {
+    background-color: #ebd8b7 !important;
+    border-color: rgba(60, 40, 20, 0.18) !important;
+}
+
+#reader-root.theme-sepia .reader-tool-btn {
+    color: #3b3228 !important;
+}
+
+#reader-root.theme-sepia .reader-tool-btn:hover {
+    background-color: rgba(60, 40, 20, 0.08) !important;
+}
+
+#reader-root.theme-sepia .reader-tool-btn.active {
+    background-color: #dbc39c !important;
+    color: #8c5a2b !important;
+}
+
+#reader-root.theme-sepia .reader-step-btn,
+#reader-root.theme-sepia .reader-select-group select,
+#reader-root.theme-sepia .reader-theme-btn {
+    background-color: #dcbe99 !important;
+    border-color: #cfbe9f !important;
+}
+
+#reader-root.theme-sepia input[type="range"]::-moz-range-track {
+    background-color: rgba(60, 40, 20, 0.2) !important;
+}
+
+#reader-root.theme-sepia input[type="range"]::-moz-range-thumb {
+    background-color: #cfbe9f !important;
+    border-color: #3b3228 !important;
+}
+
+#reader-root.theme-sepia .reader-tick {
+    background-color: rgba(60, 40, 20, 0.28) !important;
+}
+
+/* ============================================================
+   PRINT MEDIA SUPPORT
+============================================================ */
+@media print {
+    #reader-root {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    #reader-toolbar,
+    #reader-root .reader-popup {
+        display: none !important;
+    }
+
+    #reader-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}

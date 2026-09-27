@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Authentic In-Place Reader View",
+    "version": "1.2.0",
+    "description": "Native Firefox Reader View compatible with gestures, persistent settings, and custom fonts.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "action": {
+        "default_title": "Toggle Reader View"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "commands": {
+        "toggle-reader": {
+            "suggested_key": {
+                "default": "Alt+R",
+                "mac": "Alt+R"
+            },
+            "description": "Toggle Reader View"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "fonts/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "authentic-inplace-reader@local"
+        }
+    }
+}
