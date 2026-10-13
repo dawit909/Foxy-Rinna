@@ -21,7 +21,7 @@
 /* ============================================================
    FULLSCREEN ROOT OVERLAY
 ============================================================ */
-#reader-root {
+#foxy-rinna-root {
     position: fixed !important;
     inset: 0 !important;
     width: 100vw !important;
@@ -42,46 +42,46 @@
 }
 
 /* Chrome Typography: Strictly System Sans (Excludes font selector options) */
-#reader-toolbar,
-#reader-toolbar *,
-#reader-root .reader-popup,
-#reader-root .reader-popup *:not(#font-family-select):not(#font-family-select *),
-#reader-source {
+#foxy-rinna-toolbar,
+#foxy-rinna-toolbar *,
+#foxy-rinna-root .foxy-rinna-popup,
+#foxy-rinna-root .foxy-rinna-popup *:not(#font-family-select):not(#font-family-select *),
+#foxy-rinna-source {
     font-family: var(--font-sans) !important;
 }
 
 /* ============================================================
    THEMES (Canvas, Panel, Text & Accent)
 ============================================================ */
-#reader-root.theme-dark {
+#foxy-rinna-root.theme-dark {
     background-color: #1c1b22 !important;
     color: #dedcd8 !important;
     --link-color: #00ddff;
     --border-color: #52525e;
 }
 
-#reader-root.theme-light {
+#foxy-rinna-root.theme-light {
     background-color: #ffffff !important;
     color: #15141a !important;
     --link-color: #0060df;
     --border-color: #cfcfd8;
 }
 
-#reader-root.theme-sepia {
+#foxy-rinna-root.theme-sepia {
     background-color: #fbf0d9 !important;
     color: #3b3228 !important;
     --link-color: #0060df;
     --border-color: #cfbe9f;
 }
 
-#reader-root.theme-contrast {
+#foxy-rinna-root.theme-contrast {
     background-color: #000000 !important;
     color: #ffffff !important;
     --link-color: #ffff00;
     --border-color: #737373;
 }
 
-#reader-root.theme-gray {
+#foxy-rinna-root.theme-gray {
     background-color: #2a2b30 !important;
     color: #f0f1f4 !important;
     --link-color: #70baff;
@@ -89,7 +89,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    #reader-root.theme-auto {
+    #foxy-rinna-root.theme-auto {
         background-color: #1c1b22 !important;
         color: #dedcd8 !important;
         --link-color: #00ddff;
@@ -98,7 +98,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-    #reader-root.theme-auto {
+    #foxy-rinna-root.theme-auto {
         background-color: #ffffff !important;
         color: #15141a !important;
         --link-color: #0060df;
@@ -109,51 +109,51 @@
 /* ============================================================
    ACTIVE FONT FAMILY OVERRIDES
 ============================================================ */
-#reader-root.font-bookerly,
-#reader-root.font-bookerly #reader-container,
-#reader-root.font-bookerly #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+#foxy-rinna-root.font-bookerly,
+#foxy-rinna-root.font-bookerly #foxy-rinna-container,
+#foxy-rinna-root.font-bookerly #foxy-rinna-content *:not(pre):not(code):not(kbd):not(samp) {
     font-family: var(--font-bookerly) !important;
 }
 
-#reader-root.font-georgia,
-#reader-root.font-georgia #reader-container,
-#reader-root.font-georgia #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+#foxy-rinna-root.font-georgia,
+#foxy-rinna-root.font-georgia #foxy-rinna-container,
+#foxy-rinna-root.font-georgia #foxy-rinna-content *:not(pre):not(code):not(kbd):not(samp) {
     font-family: var(--font-georgia) !important;
 }
 
-#reader-root.font-cheltenham,
-#reader-root.font-cheltenham #reader-container,
-#reader-root.font-cheltenham #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+#foxy-rinna-root.font-cheltenham,
+#foxy-rinna-root.font-cheltenham #foxy-rinna-container,
+#foxy-rinna-root.font-cheltenham #foxy-rinna-content *:not(pre):not(code):not(kbd):not(samp) {
     font-family: var(--font-cheltenham) !important;
 }
 
-#reader-root.font-sans,
-#reader-root.font-sans #reader-container,
-#reader-root.font-sans #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+#foxy-rinna-root.font-sans,
+#foxy-rinna-root.font-sans #foxy-rinna-container,
+#foxy-rinna-root.font-sans #foxy-rinna-content *:not(pre):not(code):not(kbd):not(samp) {
     font-family: var(--font-sans) !important;
 }
 
-#reader-root.font-charter,
-#reader-root.font-charter #reader-container,
-#reader-root.font-charter #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+#foxy-rinna-root.font-charter,
+#foxy-rinna-root.font-charter #foxy-rinna-container,
+#foxy-rinna-root.font-charter #foxy-rinna-content *:not(pre):not(code):not(kbd):not(samp) {
     font-family: var(--font-charter) !important;
 }
 
-#reader-root.font-garamond,
-#reader-root.font-garamond #reader-container,
-#reader-root.font-garamond #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+#foxy-rinna-root.font-garamond,
+#foxy-rinna-root.font-garamond #foxy-rinna-container,
+#foxy-rinna-root.font-garamond #foxy-rinna-content *:not(pre):not(code):not(kbd):not(samp) {
     font-family: var(--font-garamond) !important;
 }
 
-#reader-root.font-palatino,
-#reader-root.font-palatino #reader-container,
-#reader-root.font-palatino #reader-content *:not(pre):not(code):not(kbd):not(samp) {
+#foxy-rinna-root.font-palatino,
+#foxy-rinna-root.font-palatino #foxy-rinna-container,
+#foxy-rinna-root.font-palatino #foxy-rinna-content *:not(pre):not(code):not(kbd):not(samp) {
     font-family: var(--font-palatino) !important;
 }
 
-#reader-root.font-mono,
-#reader-root.font-mono #reader-container,
-#reader-root.font-mono #reader-content * {
+#foxy-rinna-root.font-mono,
+#foxy-rinna-root.font-mono #foxy-rinna-container,
+#foxy-rinna-root.font-mono #foxy-rinna-content * {
     font-family: var(--font-mono) !important;
 }
 
@@ -161,94 +161,94 @@
    FONT SELECTOR: LIVE FONT STYLES (Menu & Closed Display)
 ============================================================ */
 /* Active select box reflects chosen font */
-#reader-root.font-bookerly #font-family-select {
+#foxy-rinna-root.font-bookerly #font-family-select {
     font-family: var(--font-bookerly) !important;
 }
 
-#reader-root.font-cheltenham #font-family-select {
+#foxy-rinna-root.font-cheltenham #font-family-select {
     font-family: var(--font-cheltenham) !important;
 }
 
-#reader-root.font-georgia #font-family-select {
+#foxy-rinna-root.font-georgia #font-family-select {
     font-family: var(--font-georgia) !important;
 }
 
-#reader-root.font-sans #font-family-select {
+#foxy-rinna-root.font-sans #font-family-select {
     font-family: var(--font-sans) !important;
 }
 
-#reader-root.font-charter #font-family-select {
+#foxy-rinna-root.font-charter #font-family-select {
     font-family: var(--font-charter) !important;
 }
 
-#reader-root.font-garamond #font-family-select {
+#foxy-rinna-root.font-garamond #font-family-select {
     font-family: var(--font-garamond) !important;
 }
 
-#reader-root.font-palatino #font-family-select {
+#foxy-rinna-root.font-palatino #font-family-select {
     font-family: var(--font-palatino) !important;
 }
 
-#reader-root.font-mono #font-family-select {
+#foxy-rinna-root.font-mono #font-family-select {
     font-family: var(--font-mono) !important;
 }
 
 /* Each dropdown option renders in its own typeface */
-#reader-root select#font-family-select option {
+#foxy-rinna-root select#font-family-select option {
     font-size: 15px !important;
     padding: 6px 10px !important;
 }
 
-#reader-root select#font-family-select option[value="font-bookerly"],
-#reader-root .opt-bookerly {
+#foxy-rinna-root select#font-family-select option[value="font-bookerly"],
+#foxy-rinna-root .opt-bookerly {
     font-family: var(--font-bookerly) !important;
 }
 
-#reader-root select#font-family-select option[value="font-cheltenham"],
-#reader-root .opt-cheltenham {
+#foxy-rinna-root select#font-family-select option[value="font-cheltenham"],
+#foxy-rinna-root .opt-cheltenham {
     font-family: var(--font-cheltenham) !important;
 }
 
-#reader-root select#font-family-select option[value="font-georgia"],
-#reader-root .opt-georgia {
+#foxy-rinna-root select#font-family-select option[value="font-georgia"],
+#foxy-rinna-root .opt-georgia {
     font-family: var(--font-georgia) !important;
 }
 
-#reader-root select#font-family-select option[value="font-sans"],
-#reader-root .opt-sans {
+#foxy-rinna-root select#font-family-select option[value="font-sans"],
+#foxy-rinna-root .opt-sans {
     font-family: var(--font-sans) !important;
 }
 
-#reader-root select#font-family-select option[value="font-charter"],
-#reader-root .opt-charter {
+#foxy-rinna-root select#font-family-select option[value="font-charter"],
+#foxy-rinna-root .opt-charter {
     font-family: var(--font-charter) !important;
 }
 
-#reader-root select#font-family-select option[value="font-garamond"],
-#reader-root .opt-garamond {
+#foxy-rinna-root select#font-family-select option[value="font-garamond"],
+#foxy-rinna-root .opt-garamond {
     font-family: var(--font-garamond) !important;
 }
 
-#reader-root select#font-family-select option[value="font-palatino"],
-#reader-root .opt-palatino {
+#foxy-rinna-root select#font-family-select option[value="font-palatino"],
+#foxy-rinna-root .opt-palatino {
     font-family: var(--font-palatino) !important;
 }
 
-#reader-root select#font-family-select option[value="font-mono"],
-#reader-root .opt-mono {
+#foxy-rinna-root select#font-family-select option[value="font-mono"],
+#foxy-rinna-root .opt-mono {
     font-family: var(--font-mono) !important;
 }
 
 /* Code Block Protection */
-#reader-content pre,
-#reader-content code,
-#reader-content kbd,
-#reader-content samp {
+#foxy-rinna-content pre,
+#foxy-rinna-content code,
+#foxy-rinna-content kbd,
+#foxy-rinna-content samp {
     font-family: var(--font-mono) !important;
     font-size: 0.9em !important;
 }
 
-#reader-content pre {
+#foxy-rinna-content pre {
     padding: 14px 18px !important;
     border-radius: 6px !important;
     background: rgba(127, 127, 127, 0.12) !important;
@@ -258,7 +258,7 @@
 /* ============================================================
    ARTICLE CONTAINER
 ============================================================ */
-#reader-container {
+#foxy-rinna-container {
     box-sizing: border-box !important;
     width: 100% !important;
     font-size: var(--font-step) !important;
@@ -268,7 +268,7 @@
     transition: max-width 0.15s ease-out;
 }
 
-#reader-title {
+#foxy-rinna-title {
     font-size: calc(var(--font-step) * 1.75) !important;
     line-height: 1.25 !important;
     font-weight: 700 !important;
@@ -276,7 +276,7 @@
     color: inherit !important;
 }
 
-#reader-source {
+#foxy-rinna-source {
     display: inline-block !important;
     color: var(--link-color, #00ddff) !important;
     font-size: 14px !important;
@@ -285,60 +285,60 @@
     margin-bottom: 14px !important;
 }
 
-#reader-source:hover {
+#foxy-rinna-source:hover {
     text-decoration: underline !important;
 }
 
-#reader-byline {
+#foxy-rinna-byline {
     font-style: italic !important;
     font-size: 0.95em !important;
     opacity: 0.8 !important;
     margin-bottom: 6px !important;
 }
 
-#reader-reading-time {
+#foxy-rinna-reading-time {
     font-size: 0.85em !important;
     opacity: 0.75 !important;
     margin-bottom: 20px !important;
 }
 
-.reader-header-separator {
+.foxy-rinna-header-separator {
     border: 0 !important;
     border-top: 1px solid var(--border-color, #52525e) !important;
     margin-bottom: 30px !important;
 }
 
 /* Universal text sizing and line leading */
-#reader-content,
-#reader-content * {
+#foxy-rinna-content,
+#foxy-rinna-content * {
     font-size: var(--font-step) !important;
     line-height: var(--line-height) !important;
     color: inherit !important;
 }
 
-#reader-content p,
-#reader-content div,
-#reader-content span,
-#reader-content li {
+#foxy-rinna-content p,
+#foxy-rinna-content div,
+#foxy-rinna-content span,
+#foxy-rinna-content li {
     font-weight: var(--font-weight) !important;
 }
 
-#reader-content strong,
-#reader-content b,
-#reader-content th {
+#foxy-rinna-content strong,
+#foxy-rinna-content b,
+#foxy-rinna-content th {
     font-weight: 700 !important;
 }
 
-#reader-content p {
+#foxy-rinna-content p {
     margin-top: calc(var(--line-height) * 0.8em) !important;
     margin-bottom: calc(var(--line-height) * 0.8em) !important;
 }
 
-#reader-content a {
+#foxy-rinna-content a {
     color: var(--link-color, #00ddff) !important;
 }
 
-#reader-content img {
+#foxy-rinna-content img {
     max-width: 100% !important;
     height: auto !important;
     display: block !important;
@@ -347,37 +347,37 @@
 }
 
 /* Scaled Sub-Headings */
-#reader-content h1 {
+#foxy-rinna-content h1 {
     font-size: calc(var(--font-step) * 1.5) !important;
     line-height: 1.3 !important;
     font-weight: 700 !important;
     margin: 1.6em 0 0.6em 0 !important;
 }
 
-#reader-content h2 {
+#foxy-rinna-content h2 {
     font-size: calc(var(--font-step) * 1.3) !important;
     line-height: 1.35 !important;
     font-weight: 700 !important;
     margin: 1.5em 0 0.5em 0 !important;
 }
 
-#reader-content h3 {
+#foxy-rinna-content h3 {
     font-size: calc(var(--font-step) * 1.15) !important;
     line-height: 1.4 !important;
     font-weight: 600 !important;
     margin: 1.3em 0 0.4em 0 !important;
 }
 
-#reader-content h4,
-#reader-content h5,
-#reader-content h6 {
+#foxy-rinna-content h4,
+#foxy-rinna-content h5,
+#foxy-rinna-content h6 {
     font-size: var(--font-step) !important;
     line-height: 1.4 !important;
     font-weight: 600 !important;
     margin: 1.2em 0 0.4em 0 !important;
 }
 
-#reader-content table {
+#foxy-rinna-content table {
     border-collapse: collapse !important;
     width: 100% !important;
     margin: 2em 0 !important;
@@ -386,8 +386,8 @@
     font-size: 0.9em !important;
 }
 
-#reader-content th,
-#reader-content td {
+#foxy-rinna-content th,
+#foxy-rinna-content td {
     border: 1px solid var(--border-color, #52525e) !important;
     padding: 10px 14px !important;
     text-align: left !important;
@@ -396,7 +396,7 @@
 /* ============================================================
    AUTHENTIC TOOLBAR
 ============================================================ */
-#reader-toolbar {
+#foxy-rinna-toolbar {
     position: fixed !important;
     top: 25vh !important;
     left: 32px !important;
@@ -411,7 +411,7 @@
     z-index: 2147483647 !important;
 }
 
-#reader-root .reader-tool-btn {
+#foxy-rinna-root .foxy-rinna-tool-btn {
     width: 36px !important;
     height: 36px !important;
     background: transparent !important;
@@ -430,17 +430,17 @@
     transition: background-color 0.12s ease, color 0.12s ease !important;
 }
 
-#reader-root .reader-tool-btn:hover {
+#foxy-rinna-root .foxy-rinna-tool-btn:hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
     color: #ffffff !important;
 }
 
-#reader-root .reader-tool-btn.active {
+#foxy-rinna-root .foxy-rinna-tool-btn.active {
     background-color: #384c5a !important;
     color: #00ddff !important;
 }
 
-#reader-root .reader-tool-btn svg {
+#foxy-rinna-root .foxy-rinna-tool-btn svg {
     width: 16px !important;
     height: 16px !important;
     display: block !important;
@@ -450,7 +450,7 @@
 /* ============================================================
    100% SOLID POPUPS
 ============================================================ */
-#reader-root .reader-popup {
+#foxy-rinna-root .foxy-rinna-popup {
     position: fixed !important;
     top: 25vh !important;
     left: 80px !important;
@@ -465,56 +465,56 @@
     opacity: 1 !important;
 }
 
-#reader-root .reader-hidden {
+#foxy-rinna-root .foxy-rinna-hidden {
     display: none !important;
 }
 
 /* Modal Theme Styling */
-#reader-root.theme-dark .reader-popup,
-#reader-root.theme-auto .reader-popup {
+#foxy-rinna-root.theme-dark .foxy-rinna-popup,
+#foxy-rinna-root.theme-auto .foxy-rinna-popup {
     background-color: #2b2a33 !important;
     color: #dedcd8 !important;
     border-color: #52525e !important;
 }
 
-#reader-root.theme-light .reader-popup {
+#foxy-rinna-root.theme-light .foxy-rinna-popup {
     background-color: #f0f0f4 !important;
     color: #15141a !important;
     border-color: #cfcfd8 !important;
 }
 
-#reader-root.theme-sepia .reader-popup {
+#foxy-rinna-root.theme-sepia .foxy-rinna-popup {
     background-color: #ebd8b7 !important;
     color: #3b3228 !important;
     border-color: #cfbe9f !important;
 }
 
-#reader-root.theme-contrast .reader-popup {
+#foxy-rinna-root.theme-contrast .foxy-rinna-popup {
     background-color: #141414 !important;
     color: #ffffff !important;
     border-color: #737373 !important;
 }
 
-#reader-root.theme-gray .reader-popup {
+#foxy-rinna-root.theme-gray .foxy-rinna-popup {
     background-color: #373941 !important;
     color: #f0f1f4 !important;
     border-color: #585a66 !important;
 }
 
-#reader-root .reader-popup-title {
+#foxy-rinna-root .foxy-rinna-popup-title {
     font-size: 16px !important;
     font-weight: 700 !important;
     margin-bottom: 12px !important;
     color: inherit !important;
 }
 
-#reader-root .reader-popup-divider {
+#foxy-rinna-root .foxy-rinna-popup-divider {
     border: 0 !important;
     border-top: 1px solid rgba(127, 127, 127, 0.3) !important;
     margin: 14px 0 !important;
 }
 
-#reader-root .reader-control-row {
+#foxy-rinna-root .foxy-rinna-control-row {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
@@ -523,12 +523,12 @@
     color: inherit !important;
 }
 
-#reader-root .reader-stepper {
+#foxy-rinna-root .foxy-rinna-stepper {
     display: flex !important;
     gap: 4px !important;
 }
 
-#reader-root .reader-step-btn {
+#foxy-rinna-root .foxy-rinna-step-btn {
     background-color: #42414d !important;
     border: none !important;
     color: inherit !important;
@@ -540,27 +540,27 @@
     cursor: pointer !important;
 }
 
-#reader-root .reader-step-btn:hover {
+#foxy-rinna-root .foxy-rinna-step-btn:hover {
     opacity: 0.8 !important;
 }
 
-#reader-root .reader-control-grid {
+#foxy-rinna-root .foxy-rinna-control-grid {
     display: flex !important;
     gap: 10px !important;
 }
 
-#reader-root .reader-select-group {
+#foxy-rinna-root .foxy-rinna-select-group {
     flex: 1 !important;
 }
 
-#reader-root .reader-select-group label {
+#foxy-rinna-root .foxy-rinna-select-group label {
     display: block !important;
     font-size: 12px !important;
     opacity: 0.75 !important;
     margin-bottom: 6px !important;
 }
 
-#reader-root .reader-select-group select {
+#foxy-rinna-root .foxy-rinna-select-group select {
     width: 100% !important;
     background-color: #42414d !important;
     color: inherit !important;
@@ -572,11 +572,11 @@
 }
 
 /* Sliders & Step Ticks */
-#reader-root .reader-slider-block {
+#foxy-rinna-root .foxy-rinna-slider-block {
     margin-bottom: 14px !important;
 }
 
-#reader-root .reader-slider-label {
+#foxy-rinna-root .foxy-rinna-slider-label {
     font-size: 13.5px !important;
     font-weight: 500 !important;
     color: inherit !important;
@@ -584,13 +584,13 @@
     opacity: 0.9 !important;
 }
 
-#reader-root .reader-slider-row {
+#foxy-rinna-root .foxy-rinna-slider-row {
     display: flex !important;
     align-items: flex-start !important;
     gap: 12px !important;
 }
 
-#reader-root .reader-slider-icon {
+#foxy-rinna-root .foxy-rinna-slider-icon {
     font-size: 13px !important;
     opacity: 0.85 !important;
     font-family: monospace !important;
@@ -599,13 +599,13 @@
     user-select: none !important;
 }
 
-#reader-root .reader-slider-wrap {
+#foxy-rinna-root .foxy-rinna-slider-wrap {
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important;
 }
 
-#reader-root .reader-slider-wrap input[type="range"] {
+#foxy-rinna-root .foxy-rinna-slider-wrap input[type="range"] {
     -webkit-appearance: none !important;
     appearance: none !important;
     background: transparent !important;
@@ -616,20 +616,20 @@
     display: block !important;
 }
 
-#reader-root .reader-slider-wrap input[type="range"]::-moz-range-track {
+#foxy-rinna-root .foxy-rinna-slider-wrap input[type="range"]::-moz-range-track {
     height: 4px !important;
     background-color: rgba(255, 255, 255, 0.3) !important;
     border-radius: 2px !important;
     border: none !important;
 }
 
-#reader-root .reader-slider-wrap input[type="range"]::-moz-range-progress {
+#foxy-rinna-root .foxy-rinna-slider-wrap input[type="range"]::-moz-range-progress {
     height: 4px !important;
     background-color: var(--link-color, #00ddff) !important;
     border-radius: 2px !important;
 }
 
-#reader-root .reader-slider-wrap input[type="range"]::-moz-range-thumb {
+#foxy-rinna-root .foxy-rinna-slider-wrap input[type="range"]::-moz-range-thumb {
     width: 18px !important;
     height: 18px !important;
     border-radius: 50% !important;
@@ -640,7 +640,7 @@
     box-sizing: border-box !important;
 }
 
-#reader-root .reader-ticks {
+#foxy-rinna-root .foxy-rinna-ticks {
     display: flex !important;
     justify-content: space-between !important;
     padding: 0 9px !important;
@@ -649,7 +649,7 @@
     pointer-events: none !important;
 }
 
-#reader-root .reader-tick {
+#foxy-rinna-root .foxy-rinna-tick {
     width: 1px !important;
     height: 4px !important;
     background-color: rgba(255, 255, 255, 0.32) !important;
@@ -657,13 +657,13 @@
 }
 
 /* Themes Grid */
-#reader-root .reader-theme-tabs {
+#foxy-rinna-root .foxy-rinna-theme-tabs {
     display: flex !important;
     border-bottom: 1px solid rgba(127, 127, 127, 0.3) !important;
     margin-bottom: 14px !important;
 }
 
-#reader-root .reader-theme-tab {
+#foxy-rinna-root .foxy-rinna-theme-tab {
     background: none !important;
     border: none !important;
     padding: 6px 14px !important;
@@ -674,18 +674,18 @@
     cursor: pointer !important;
 }
 
-#reader-root .reader-theme-tab.active {
+#foxy-rinna-root .foxy-rinna-theme-tab.active {
     opacity: 1 !important;
     border-bottom: 2px solid var(--link-color, #00ddff) !important;
 }
 
-#reader-root .reader-theme-grid {
+#foxy-rinna-root .foxy-rinna-theme-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 8px !important;
 }
 
-#reader-root .reader-theme-btn {
+#foxy-rinna-root .foxy-rinna-theme-btn {
     display: flex !important;
     align-items: center !important;
     gap: 10px !important;
@@ -699,117 +699,117 @@
     cursor: pointer !important;
 }
 
-#reader-root .reader-theme-btn.active {
+#foxy-rinna-root .foxy-rinna-theme-btn.active {
     border-color: #ffffff !important;
     outline: 1px solid #ffffff !important;
 }
 
-#reader-root .reader-circle {
+#foxy-rinna-root .foxy-rinna-circle {
     width: 16px !important;
     height: 16px !important;
     border-radius: 50% !important;
     border: 1px solid rgba(127, 127, 127, 0.4) !important;
 }
 
-#reader-root .circle-auto {
+#foxy-rinna-root .circle-auto {
     background: linear-gradient(90deg, #ffffff 50%, #1c1b22 50%) !important;
 }
 
-#reader-root .circle-light {
+#foxy-rinna-root .circle-light {
     background: #ffffff !important;
 }
 
-#reader-root .circle-dark {
+#foxy-rinna-root .circle-dark {
     background: #1c1b22 !important;
 }
 
-#reader-root .circle-sepia {
+#foxy-rinna-root .circle-sepia {
     background: #ebd8b7 !important;
 }
 
-#reader-root .circle-contrast {
+#foxy-rinna-root .circle-contrast {
     background: #000000 !important;
 }
 
-#reader-root .circle-gray {
+#foxy-rinna-root .circle-gray {
     background: #9a9da8 !important;
 }
 
 /* Light/Sepia Overrides */
-#reader-root.theme-light #reader-toolbar {
+#foxy-rinna-root.theme-light #foxy-rinna-toolbar {
     background-color: #f0f0f4 !important;
     border-color: rgba(0, 0, 0, 0.14) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
-#reader-root.theme-light .reader-tool-btn {
+#foxy-rinna-root.theme-light .foxy-rinna-tool-btn {
     color: #2b2a33 !important;
 }
 
-#reader-root.theme-light .reader-tool-btn:hover {
+#foxy-rinna-root.theme-light .foxy-rinna-tool-btn:hover {
     background-color: rgba(0, 0, 0, 0.06) !important;
 }
 
-#reader-root.theme-light .reader-tool-btn.active {
+#foxy-rinna-root.theme-light .foxy-rinna-tool-btn.active {
     background-color: #d2e3f8 !important;
     color: #0060df !important;
 }
 
-#reader-root.theme-light .reader-step-btn,
-#reader-root.theme-light .reader-select-group select,
-#reader-root.theme-light .reader-theme-btn {
+#foxy-rinna-root.theme-light .foxy-rinna-step-btn,
+#foxy-rinna-root.theme-light .foxy-rinna-select-group select,
+#foxy-rinna-root.theme-light .foxy-rinna-theme-btn {
     background-color: #e0e0e6 !important;
     border-color: #cfcfd8 !important;
 }
 
-#reader-root.theme-light input[type="range"]::-moz-range-track {
+#foxy-rinna-root.theme-light input[type="range"]::-moz-range-track {
     background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
-#reader-root.theme-light input[type="range"]::-moz-range-thumb {
+#foxy-rinna-root.theme-light input[type="range"]::-moz-range-thumb {
     background-color: #cfcfd8 !important;
     border-color: #15141a !important;
 }
 
-#reader-root.theme-light .reader-tick {
+#foxy-rinna-root.theme-light .foxy-rinna-tick {
     background-color: rgba(0, 0, 0, 0.28) !important;
 }
 
-#reader-root.theme-sepia #reader-toolbar {
+#foxy-rinna-root.theme-sepia #foxy-rinna-toolbar {
     background-color: #ebd8b7 !important;
     border-color: rgba(60, 40, 20, 0.18) !important;
 }
 
-#reader-root.theme-sepia .reader-tool-btn {
+#foxy-rinna-root.theme-sepia .foxy-rinna-tool-btn {
     color: #3b3228 !important;
 }
 
-#reader-root.theme-sepia .reader-tool-btn:hover {
+#foxy-rinna-root.theme-sepia .foxy-rinna-tool-btn:hover {
     background-color: rgba(60, 40, 20, 0.08) !important;
 }
 
-#reader-root.theme-sepia .reader-tool-btn.active {
+#foxy-rinna-root.theme-sepia .foxy-rinna-tool-btn.active {
     background-color: #dbc39c !important;
     color: #8c5a2b !important;
 }
 
-#reader-root.theme-sepia .reader-step-btn,
-#reader-root.theme-sepia .reader-select-group select,
-#reader-root.theme-sepia .reader-theme-btn {
+#foxy-rinna-root.theme-sepia .foxy-rinna-step-btn,
+#foxy-rinna-root.theme-sepia .foxy-rinna-select-group select,
+#foxy-rinna-root.theme-sepia .foxy-rinna-theme-btn {
     background-color: #dcbe99 !important;
     border-color: #cfbe9f !important;
 }
 
-#reader-root.theme-sepia input[type="range"]::-moz-range-track {
+#foxy-rinna-root.theme-sepia input[type="range"]::-moz-range-track {
     background-color: rgba(60, 40, 20, 0.2) !important;
 }
 
-#reader-root.theme-sepia input[type="range"]::-moz-range-thumb {
+#foxy-rinna-root.theme-sepia input[type="range"]::-moz-range-thumb {
     background-color: #cfbe9f !important;
     border-color: #3b3228 !important;
 }
 
-#reader-root.theme-sepia .reader-tick {
+#foxy-rinna-root.theme-sepia .foxy-rinna-tick {
     background-color: rgba(60, 40, 20, 0.28) !important;
 }
 
@@ -817,7 +817,7 @@
    PRINT MEDIA SUPPORT
 ============================================================ */
 @media print {
-    #reader-root {
+    #foxy-rinna-root {
         position: static !important;
         width: 100% !important;
         height: auto !important;
@@ -826,12 +826,12 @@
         color: #000000 !important;
     }
 
-    #reader-toolbar,
-    #reader-root .reader-popup {
+    #foxy-rinna-toolbar,
+    #foxy-rinna-root .foxy-rinna-popup {
         display: none !important;
     }
 
-    #reader-container {
+    #foxy-rinna-container {
         max-width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
